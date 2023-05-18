@@ -1,7 +1,7 @@
 [
     {
         "toyName": "Chemistry Lab Deluxe Set",
-        "picURL": "https://example.com/chemistry_lab_deluxe_set.jpg",
+        "picURL": "https://img.freepik.com/free-photo/front-view-different-colorful-solutions-inside-flasks-table_140725-19222.jpg?w=1380&t=st=1684416295~exp=1684416895~hmac=5057971005b2c4b3030e203e087619a33280c1c9697b6abeceed861dd76a9c2d",
         "sellerName": "Science Explorers",
         "sellerEmail": "info@scienceexplorers.com",
         "category": "Science Kits",
@@ -14,7 +14,7 @@
     },
     {
         "toyName": "Microscope Discovery Kit",
-        "picURL": "https://example.com/microscope_discovery_kit.jpg",
+        "picURL": "https://img.freepik.com/free-photo/world-science-day-arrangement-with-microscope_23-2149112643.jpg?w=740&t=st=1684416045~exp=1684416645~hmac=506d391238208170fdb370889a220773dae698edbccc0a06d58cb7bb54cc4369",
         "sellerName": "Curious Minds",
         "sellerEmail": "contact@curiousminds.com",
         "category": "Science Kits",
@@ -27,7 +27,7 @@
     },
     {
         "toyName": "Solar Power Experiment Set",
-        "picURL": "https://example.com/solar_power_experiment_set.jpg",
+        "picURL": "https://img.freepik.com/free-photo/business-person-planning-alternative-energies_23-2149205425.jpg?w=1380&t=st=1684416482~exp=1684417082~hmac=e221a4000211369c9e00230780dd47340e9dc99d5a2c9a7b83ac96e01950659c",
         "sellerName": "Sunshine Science",
         "sellerEmail": "sales@sunshinescience.com",
         "category": "Science Kits",
@@ -40,7 +40,7 @@
     },
     {
         "toyName": "Alphabet Adventure Kit",
-        "picURL": "https://example.com/alphabet_adventure_kit.jpg",
+        "picURL": "https://img.freepik.com/free-photo/hand-arrange-white-letters-brand_1384-109.jpg?w=1380&t=st=1684416636~exp=1684417236~hmac=3da0d47f2a86a271a9361a0a5920d9775942857612f6d5bc6ce695dd40082752",
         "sellerName": "Learn and Grow",
         "sellerEmail": "info@learnandgrow.com",
         "category": "Learning Kits",
@@ -53,7 +53,7 @@
     },
     {
         "toyName": "Math Mastermind Set",
-        "picURL": "https://example.com/math_mastermind_set.jpg",
+        "picURL": "https://img.freepik.com/free-photo/colorful-stationeries-yellow-background_23-2147879933.jpg?w=1380&t=st=1684416854~exp=1684417454~hmac=15c149f7a82a451af4fcc581c8f05f7cb98c02d85d53d78910cf0ac71c829003",
         "sellerName": "Math Wizards",
         "sellerEmail": "contact@mathwizards.com",
         "category": "Learning Kits",
@@ -66,7 +66,7 @@
     },
     {
         "toyName": "Geography Explorer Kit",
-        "picURL": "https://example.com/geography_explorer_kit.jpg",
+        "picURL": "https://img.freepik.com/free-photo/binoculars-magnifying-glass-near-pen-notebook_23-2147793467.jpg?w=1380&t=st=1684417203~exp=1684417803~hmac=91f19a91c7c84b70b2034b5c6ecf57b39e3e4ca4cb77e194556125ec95275432",
         "sellerName": "World Explorations",
         "sellerEmail": "sales@worldexplorations.com",
         "category": "Learning Kits",
@@ -79,7 +79,7 @@
     },
     {
         "toyName": "Build Your Own Robot Set",
-        "picURL": "https://example.com/build_your_own_robot_set.jpg",
+        "picURL": "https://img.freepik.com/free-photo/home-made-robot-desk_23-2148863420.jpg?w=1380&t=st=1684417405~exp=1684418005~hmac=fa09b5fc26b8371d0555a0e146f347a7f721ab17aa7b9f89703cfb160b106d83",
         "sellerName": "Tech Builders",
         "sellerEmail": "info@techbuilders.com",
         "category": "Engineering Kits",
@@ -92,7 +92,7 @@
     },
     {
         "toyName": "Structural Engineering Kit",
-        "picURL": "https://example.com/structural_engineering_kit.jpg",
+        "picURL": "https://img.freepik.com/free-photo/blue-print-arrangement-yellow-repair-tools_23-2148393066.jpg?w=1380&t=st=1684417978~exp=1684418578~hmac=335fa09426f23ec4b6cfd4ef2ecae80b648530c39ccf11bf6272f206a1b98962",
         "sellerName": "Engineer's Workshop",
         "sellerEmail": "contact@engineersworkshop.com",
         "category": "Engineering Kits",
@@ -105,7 +105,7 @@
     },
     {
         "toyName": "Electric Circuits Challenge Set",
-        "picURL": "https://example.com/electric_circuits_challenge_set.jpg",
+        "picURL": "https://img.freepik.com/free-photo/top-view-reparation-circuit-board_23-2148419196.jpg?w=1380&t=st=1684418149~exp=1684418749~hmac=ed132441720a84db2c0d6416614d388d4ced495414c45303ebe2138850ff4acc",
         "sellerName": "Circuit Masters",
         "sellerEmail": "sales@circuitmasters.com",
         "category": "Engineering Kits",
