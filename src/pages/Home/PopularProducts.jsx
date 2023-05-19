@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const PopularProducts = () => {
     const [productData, setProductData] = useState([]);

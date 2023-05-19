@@ -1,8 +1,6 @@
 import React from 'react';
 import bannerBg from '../../assets/eduBanner.jpg';
 import bannerImage from '../../assets/geography.jpg';
-import bannerImage2 from '../../assets/chemistry.jpg';
-
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Banner = () => {

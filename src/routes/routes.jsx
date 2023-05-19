@@ -4,13 +4,15 @@ import AllToys from "../pages/AllToys/AllToys";
 import MyToys from "../pages/MyToys/MyToys";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home";
+import Login from "../pages/Login/Login";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
-    //   errorElement: <ErrorPage></ErrorPage>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: "/",
@@ -32,10 +34,10 @@ const router = createBrowserRouter([
           path: "/blogs",
           element: <Blogs></Blogs>,
         },
-        // {
-        //   path: "/login",
-        //   element: <Login></Login>,
-        // },
+        {
+          path: "/login",
+          element: <Login></Login>,
+        },
         // {
         //   path: "/register",
         //   element: <Register></Register>,

@@ -7,7 +7,7 @@ import logo from "../../../../public/cover.png"
 
 const Header = () => {
     //   const { user, logOut } = useContext(AuthContext);
-    const user = { name: 'Liza' }
+    const user = { };
     const handleSignOut = () => {
         console.log('Ok');
         // logOut()
