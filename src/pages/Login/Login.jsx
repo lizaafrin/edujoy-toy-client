@@ -65,43 +65,43 @@ const Login = () => {
   };
 
   return (
-    <div className="container mx-auto px-2 lg:px-0">
+    <div className="container  px-2 lg:px-0 mx-auto" >
       <form
         onSubmit={handleLogin}
-        className="bg-white p-6 lg:p-10  border-2 rounded-lg w-full lg:w-2/5 mx-auto mt-16"
+        className="bg-white border-2 rounded-lg w-full lg:w-2/5 mx-auto mt-16 p-6 lg:p-10"
       >
-        <h1 className="text-xl md:text-2xl font-bold leading-tight mb-5">
+        <h1 className="font-bold leading-tight text-xl md:text-2xl mb-5">
           Log in to your account
         </h1>
-        <div className="relative z-0 w-full mb-6 group">
+        <div className="relative group z-0 w-full mb-6 ">
           <input
             type="email"
             name="floating_email"
             id="floating_email"
             ref={emailRef}
-            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            className="block py-2.5 px-0 w-full text-sm dark:focus:border-fuchsia-500 focus:outline-none focus:ring-0 focus:border-fuchsia-600 peer text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 "
             placeholder=" "
             required
           />
           <label
             htmlFor="floating_email"
-            className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="peer-focus:font-medium absolute  peer-focus:dark:text-fuchsia-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-fuchsia-600"
           >
             Email address
           </label>
         </div>
-        <div className="relative z-0 w-full mb-6 group">
+        <div className="relative group z-0 w-full mb-6 ">
           <input
             type="password"
             name="floating_password"
             id="floating_password"
-            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            className="block py-2.5 dark:focus:border-fuchsia-500 focus:outline-none focus:ring-0 focus:border-fuchsia-600 peer px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 "
             placeholder=" "
             required
           />
           <label
             htmlFor="floating_password"
-            className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            className="peer-focus:font-medium absolute text-sm peer-focus:text-fuchsia-600 peer-focus:dark:text-fuchsia-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 "
           >
             Password
           </label>
@@ -114,7 +114,7 @@ const Login = () => {
               id="remember"
               type="checkbox"
               value=""
-              className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+              className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-fuchsia-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
               required
             />
             <label
