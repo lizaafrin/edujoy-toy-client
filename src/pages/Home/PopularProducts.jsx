@@ -18,7 +18,7 @@ const PopularProducts = () => {
                 {
                     descendingRating.slice(0, 3).map(product => {
                         return (
-                            <div className="card w-96 bg-base-100 shadow-xl">
+                            <div key={product.id} className="card w-96 bg-base-100 shadow-xl">
                                 <figure><img src={product.picURL} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">
