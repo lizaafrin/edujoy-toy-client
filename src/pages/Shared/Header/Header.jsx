@@ -6,13 +6,13 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import logo from "../../../../public/cover.png"
 
 const Header = () => {
-    //   const { user, logOut } = useContext(AuthContext);
-    const user = { };
+    const { user, logOut } = useContext(AuthContext);
+    // const user = { };
     const handleSignOut = () => {
         console.log('Ok');
-        // logOut()
-        //   .then((result) => {})
-        //   .catch((error) => console.log(error));
+        logOut()
+          .then((result) => {})
+          .catch((error) => console.log(error));
     };
 
     const navItems = <>
@@ -70,14 +70,14 @@ const Header = () => {
                 <div className="navbar-end flex gap-4 mr-4">
                     {user ? (
                         <button
-                            className="hover:bg-green-400 lg:px-4 py-3 rounded-lg"
+                            className="hover:bg-fuchsia-700 lg:px-4 py-3 rounded-lg"
                             onClick={handleSignOut}
                         >
                             Sign out
                         </button>
                     ) : (
                         <Link
-                            className="hover:bg-green-400 lg:px-4 py-3 rounded-lg"
+                            className="hover:bg-fuchsia-700 lg:px-4 py-3 rounded-lg"
                             to="/login"
                         >
                             Login{" "}
@@ -110,7 +110,7 @@ const Header = () => {
             </div>
         </div>
 
-        
+
     );
 };
 
