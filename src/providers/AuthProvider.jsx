@@ -52,7 +52,10 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         fetch("https://edujoytoy-server-side.vercel.app/toys")
             .then((res) => res.json())
-            .then((data) => settoyInfo(data))
+            .then((data) => {
+                settoyInfo(data);
+                setLoading(true);
+            })
             .catch((err) => console.log(err));
     }, []);
     // console.log(toyInfo);

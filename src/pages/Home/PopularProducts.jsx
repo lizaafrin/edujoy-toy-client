@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const PopularProducts = () => {
-    const [productData, setProductData] = useState([]);
-    useEffect(() => {
-        fetch('toys.json')
-            .then(res => res.json())
-            .then(data => setProductData(data))
-    }, [])
-    const descendingRating = [...productData].sort((a, b) => b.rating - a.rating);
+    const {toyInfo} = useContext(AuthContext);
+    console.log(toyInfo);
+    const descendingRating = [...toyInfo].sort((a, b) => b.rating - a.rating);
     // console.log(descendingRating);
     return (
         <div className='max-w-screen-2xl mx-auto gap-x-1'>
@@ -18,7 +15,7 @@ const PopularProducts = () => {
                 {
                     descendingRating.slice(0, 3).map(product => {
                         return (
-                            <div key={product.id} className="card w-96 bg-base-100 shadow-xl">
+                            <div key={product._id} className="card w-96 bg-base-100 shadow-xl">
                                 <figure><img src={product.picURL} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">

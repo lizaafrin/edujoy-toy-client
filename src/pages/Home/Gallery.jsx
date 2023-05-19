@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 
 
 const Gallery = () => {
-    const [productData, setProductData] = useState([]);
-    useEffect(() => {
-        fetch('toys.json')
-            .then(res => res.json())
-            .then(data => setProductData(data))
-    }, [])
+    const { toyInfo } = useContext(AuthContext);
+    console.log(toyInfo);
     // console.log(productData);
     return (
         <div className='mt-20'>
@@ -17,7 +14,7 @@ const Gallery = () => {
             {/* <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3'> */}
             <div className="carousel carousel-center max-w-screen-2xl p-4 space-x-4 bg-neutral rounded-box mx-auto mt-14">
                 {
-                    productData.map((product) => {
+                    toyInfo.map((product) => {
                         return ( 
                             <div key={product.id} className="card w-96 bg-base-100 shadow-xl carousel-item">
                                 <figure><img className='object-cover w-full h-cover overflow-hidden' src={product.picURL} alt="Shoes" /></figure>

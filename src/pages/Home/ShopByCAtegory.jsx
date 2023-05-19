@@ -15,6 +15,9 @@ const ShopByCAtegory = () => {
     return (
         <div className='mt-20'>
             <Tabs className='mx-10 border-fuchsia-100'>
+            <div className='w-fit mx-auto  bg-slate-800 rounded-lg mb-14'>
+                <h2 className='text-xl text-white px-10 py-3'>Find Your Desired Products</h2>
+            </div>
                 <div className='border-0 bg-slate-800 rounded-lg mb-5'>
                     <TabList className='flex flex-row justify-around text-white text-xl py-3'>
                         <Tab>Science Kits</Tab>
@@ -26,21 +29,21 @@ const ShopByCAtegory = () => {
                 <TabPanel>
                     {/* Science kits will be shown here */}
                     {
-                        scienceKits.map(singleKit => <SingleKitCard singleKit={singleKit}></SingleKitCard>)
+                        scienceKits.map(singleKit => <SingleKitCard key={singleKit._id} singleKit={singleKit}></SingleKitCard>)
                     }
                 </TabPanel>
 
                 <TabPanel>
                     {/* Learning kits will be shown here */}
                     {
-                        learningKits.map(singleKit => <SingleKitCard singleKit={singleKit}></SingleKitCard>)
+                        learningKits.map(singleKit => <SingleKitCard key={singleKit._id} singleKit={singleKit}></SingleKitCard>)
                     }
                 </TabPanel>
 
                 <TabPanel>
                     {/* Engineering kits will be shown here */}
                     {
-                        engineeringKits.map(singleKit => <SingleKitCard singleKit={singleKit}></SingleKitCard>)
+                        engineeringKits.map(singleKit => <SingleKitCard key={singleKit._id} singleKit={singleKit}></SingleKitCard>)
                     }
                 </TabPanel>
             </Tabs>
