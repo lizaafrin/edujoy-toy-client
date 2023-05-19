@@ -22,6 +22,11 @@ const Header = () => {
             </ActiveLink>
         </li>
         <li>
+            <ActiveLink className="hover:bg-purple-700" to="/toys">
+                All Toys
+            </ActiveLink>
+        </li>
+        <li>
             <ActiveLink className="hover:bg-purple-700" to="/mytoys">
                 My Toys
             </ActiveLink>
