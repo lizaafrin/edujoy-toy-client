@@ -50,18 +50,12 @@ const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        fetch("toys.json")
+        fetch("https://edujoytoy-server-side.vercel.app/toys")
             .then((res) => res.json())
             .then((data) => settoyInfo(data))
             .catch((err) => console.log(err));
     }, []);
     // console.log(toyInfo);
-    useEffect(() => {
-        fetch("https://chef-recipe-hunter-server-side-lizaafrin.vercel.app/recipes")
-            .then((res) => res.json())
-            .then((data) => setRecipeData(data))
-            .catch((err) => console.log(err));
-    }, []);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
@@ -77,7 +71,6 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         toyInfo,
-        recipeData,
         loading,
         createUser,
         setUser,

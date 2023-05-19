@@ -1,9 +1,9 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const AllToys = () => {
-    const allToys = useLoaderData();
-    console.log(allToys);
+    const {toyInfo} = useContext(AuthContext);
+    console.log(toyInfo);
     
     return (
         <div>

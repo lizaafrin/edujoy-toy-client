@@ -14,7 +14,7 @@ const PopularProducts = () => {
             <div className='w-fit mx-auto  bg-slate-800 rounded-lg mt-20'>
                 <h2 className='text-xl text-white px-10 py-3'>Check Out Our Best Products</h2>
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-3 mt-14 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14 mx-auto ms-10'>
                 {
                     descendingRating.slice(0, 3).map(product => {
                         return (
