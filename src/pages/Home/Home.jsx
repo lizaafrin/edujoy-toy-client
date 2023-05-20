@@ -6,7 +6,7 @@ import ShopByCAtegory from './ShopByCAtegory';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-purple-100'>
             <Banner></Banner>
             <Gallery></Gallery>
             <ShopByCAtegory></ShopByCAtegory>

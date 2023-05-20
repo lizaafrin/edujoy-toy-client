@@ -3,11 +3,11 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const PopularProducts = () => {
     const {toyInfo} = useContext(AuthContext);
-    console.log(toyInfo);
+    // console.log(toyInfo);
     const descendingRating = [...toyInfo].sort((a, b) => b.rating - a.rating);
     // console.log(descendingRating);
     return (
-        <div className='max-w-screen-2xl mx-auto gap-x-1'>
+        <div className='max-w-screen-2xl mx-auto gap-x-1 pb-20'>
             <div className='w-fit mx-auto  bg-slate-800 rounded-lg mt-20'>
                 <h2 className='text-xl text-white px-10 py-3'>Check Out Our Best Products</h2>
             </div>

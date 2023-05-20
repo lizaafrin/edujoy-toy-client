@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import TableData from './TableData';
+import { useLoaderData } from 'react-router-dom';
 
 const AllToys = () => {
-    const { toyInfo } = useContext(AuthContext);
+    const toyInfo = useLoaderData();
+    // const { toyInfo } = useContext(AuthContext);
     // console.log(toyInfo);
 
     return (

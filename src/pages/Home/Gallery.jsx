@@ -4,7 +4,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const Gallery = () => {
     const { toyInfo } = useContext(AuthContext);
-    console.log(toyInfo);
+    // console.log(toyInfo);
     // console.log(productData);
     return (
         <div className='mt-20'>
@@ -16,7 +16,7 @@ const Gallery = () => {
                 {
                     toyInfo.map((product) => {
                         return ( 
-                            <div key={product.id} className="card w-96 bg-base-100 shadow-xl carousel-item">
+                            <div key={product._id} className="card w-96 bg-base-100 shadow-xl carousel-item">
                                 <figure><img className='object-cover w-full h-cover overflow-hidden' src={product.picURL} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{product.toyName}</h2>

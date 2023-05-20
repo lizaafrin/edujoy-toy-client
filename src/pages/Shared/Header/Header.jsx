@@ -11,8 +11,8 @@ const Header = () => {
     const handleSignOut = () => {
         console.log('Ok');
         logOut()
-          .then((result) => {})
-          .catch((error) => console.log(error));
+            .then((result) => { })
+            .catch((error) => console.log(error));
     };
 
     const navItems = <>
@@ -26,11 +26,21 @@ const Header = () => {
                 All Toys
             </ActiveLink>
         </li>
-        <li>
-            <ActiveLink className="hover:bg-purple-700" to="/mytoys">
-                My Toys
-            </ActiveLink>
-        </li>
+        {
+            user &&
+            <>
+                <li>
+                    <ActiveLink className="hover:bg-purple-700" to="/mytoys">
+                        My Toys
+                    </ActiveLink>
+                </li>
+                <li>
+                    <ActiveLink className="hover:bg-purple-700" to="/addtoy">
+                        Add a Toy
+                    </ActiveLink>
+                </li>
+            </>
+        }
         <li>
             <ActiveLink className="hover:bg-purple-700" to="/blogs">
                 Blog
@@ -39,7 +49,7 @@ const Header = () => {
     </>
     return (
         <div>
-            <div className="navbar shadow-md bg-gray-900 lg:px-10 py-5 text-white">
+            <div className="navbar shadow-md bg-purple-200 lg:px-10 py-5 text-black">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

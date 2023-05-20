@@ -8,44 +8,66 @@ import Login from "../pages/Login/Login";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import ToyDetails from "../pages/ToyDetails/ToyDetails";
+import ToyDetailsLayout from "../layouts/ToyDetailsLayout";
+import AddToy from "../pages/AddToy/AddToy";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      errorElement: <ErrorPage></ErrorPage>,
-      children: [
-        {
-            path: "/",
-            element: <Home></Home>,
-        },
-        {
-            path: "/blogs",
-            element: <Blogs></Blogs>,
-        },
-        {
-          path: "/toys",
-          element: <AllToys></AllToys>,
-        },
-        {
-          path: "/mytoys",
-          element: <PrivateRoute><MyToys></MyToys></PrivateRoute>,
-        },
-        {
-          path: "/blogs",
-          element: <Blogs></Blogs>,
-        },
-        {
-          path: "/login",
-          element: <Login></Login>,
-        },
-        {
-          path: "/register",
-          element: <Register></Register>,
-        },
-      ],
-    },
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      
+      {
+        path: "/toys",
+        element: <AllToys></AllToys>,
+        loader: () => fetch('http://localhost:5000/limitedtoys')
+      },
+      {
+        path: "/mytoys",
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>,
+      },
+      {
+        path: "/addtoy",
+        element: <AddToy></AddToy>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+    ],
+  },
+  {
+    path: "/toys/:id",
+    element: <ToyDetailsLayout></ToyDetailsLayout>,
+    loader: () => fetch('http://localhost:5000/toys'),
+    children: [
+      {
+        path: "/toys/:id",
+        element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+      }
+    ]
+  },
+  
 ]);
 
 export default router;
