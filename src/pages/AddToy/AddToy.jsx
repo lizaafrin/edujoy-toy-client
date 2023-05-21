@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const AddToy = () => {
+    useTitle('AddToy');
     return (
         <div className="container mx-auto px-2 lg:px-0">
             <form

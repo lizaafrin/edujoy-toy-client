@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import { AuthContext } from '../../providers/AuthProvider';
 import SingleKitCard from './SingleKitCard';
 
+
 const ShopByCAtegory = () => {
     const { toyInfo } = useContext(AuthContext);
     const scienceKits = toyInfo.filter(singleKit => singleKit.category === "Science Kits");
@@ -26,7 +27,7 @@ const ShopByCAtegory = () => {
                     </TabList>
                 </div>
 
-                <TabPanel className=''>
+                <TabPanel>
                     <div className='grid grid-cols-3 gap-4'>
                         {
                             scienceKits.slice(0, 3).map(singleKit => <SingleKitCard key={singleKit._id} singleKit={singleKit}></SingleKitCard>)

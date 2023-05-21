@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Rating from 'react-rating';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const SingleKitCard = ({ singleKit }) => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, [])
+
     const { _id, toyName, sellerName, sellerEmail, rating, price, picURL, discountPercentage, description, availableStock } = singleKit;
     return (
-        <div>
+        <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine">
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure><img className='object-cover overflow-hidden w-full h-[300px]' src={picURL} alt="Album" /></figure>
                 <div className="card-body">

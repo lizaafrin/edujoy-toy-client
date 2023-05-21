@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import TableData from './TableData';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
     const toyInfo = useLoaderData();
     // const { toyInfo } = useContext(AuthContext);
     // console.log(toyInfo);
-
+    useTitle('All Toys');
     return (
         <div>
             <div className="overflow-x-auto">

@@ -3,8 +3,11 @@ import Banner from './Banner';
 import Gallery from './Gallery';
 import PopularProducts from './PopularProducts';
 import ShopByCAtegory from './ShopByCAtegory';
+import useTitle from '../../hooks/useTitle';
+
 
 const Home = () => {
+    useTitle('Home');
     return (
         <div className='bg-purple-100'>
             <Banner></Banner>
