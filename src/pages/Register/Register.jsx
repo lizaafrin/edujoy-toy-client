@@ -53,6 +53,7 @@ const Register = () => {
                 const createdUser = result.user;
                 createdUser.displayName = name;
                 createdUser.photoURL = photo;
+                createdUser.email = email;
                 console.log(createdUser);
                 // setUser(createdUser);
                 form.reset();

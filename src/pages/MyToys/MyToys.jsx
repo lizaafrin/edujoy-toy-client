@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../../providers/AuthProvider';
 import TableData from '../AllToys/TableData';
@@ -6,8 +6,19 @@ import MyToyTable from './MyToyTable';
 
 
 const MyToys = () => {
-    const { toyInfo } = useContext(AuthContext);
-    console.log(toyInfo);
+    const [toyInfo, setToyInfo] = useState([]);
+    const { user } = useContext(AuthContext);
+    const url = `http://localhost:5000/mytoys?email=${user.email}`
+    console.log(user);
+
+    useEffect(() =>{
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setToyInfo(data))
+    }, [])
+
+    // const { toyInfo } = useContext(AuthContext);
+    // console.log(toyInfo);
     useTitle('My Toys');
     return (
         <div className="overflow-x-auto">

@@ -20,7 +20,6 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [toyInfo, settoyInfo] = useState([]);
-    const [recipeData, setRecipeData] = useState([]);
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     // console.log(user);
@@ -58,7 +57,7 @@ const AuthProvider = ({ children }) => {
             })
             .catch((err) => console.log(err));
     }, []);
-    // console.log(toyInfo);
+    console.log(user);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
