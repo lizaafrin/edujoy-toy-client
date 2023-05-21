@@ -57,7 +57,7 @@ const AuthProvider = ({ children }) => {
             })
             .catch((err) => console.log(err));
     }, []);
-    console.log(user);
+    // console.log(user);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {

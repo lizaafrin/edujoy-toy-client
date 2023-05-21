@@ -4,6 +4,7 @@ import Gallery from './Gallery';
 import PopularProducts from './PopularProducts';
 import ShopByCAtegory from './ShopByCAtegory';
 import useTitle from '../../hooks/useTitle';
+import Testimonial from './Testimonial';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <Gallery></Gallery>
             <ShopByCAtegory></ShopByCAtegory>
             <PopularProducts></PopularProducts>
+            <Testimonial></Testimonial>
         </div>
     );
 };

@@ -9,7 +9,7 @@ const MyToys = () => {
     const [toyInfo, setToyInfo] = useState([]);
     const { user } = useContext(AuthContext);
     const url = `http://localhost:5000/mytoys?email=${user.email}`
-    console.log(user);
+    // console.log(user);
 
     useEffect(() =>{
         fetch(url)

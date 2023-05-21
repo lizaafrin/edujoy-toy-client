@@ -36,7 +36,7 @@ const AddToy = () => {
         const newToy = { toyName, description, price, picURL, sellerName, sellerEmail, rating, availableStock, category };
         console.log(newToy);
 
-        fetch('http://localhost:5000/addNewToy', {
+        fetch('http://localhost:5000/myToys', {
             method: 'POST',
             headers: {
                 'content-Type': 'application/json'
