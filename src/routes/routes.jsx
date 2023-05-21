@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       {
         path: "/toys",
         element: <AllToys></AllToys>,
-        loader: () => fetch('http://localhost:5000/limitedtoys')
+        loader: () => fetch('https://edujoy-toy-serverside.vercel.app/limitedtoys')
       },
       {
         path: "/mytoys",
         element: <PrivateRoute><MyToys></MyToys></PrivateRoute>,
-        
+
       },
       {
         path: "/addtoy",
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       {
         path: "/toys/:id",
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({params}) => fetch(`https://edujoy-toy-serverside.vercel.app/toys/${params.id}`)
       }
     ]
   },

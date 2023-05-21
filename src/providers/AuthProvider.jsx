@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        fetch("http://localhost:5000/toys")
+        fetch("https://edujoy-toy-serverside.vercel.app/toys")
             .then((res) => res.json())
             .then((data) => {
                 settoyInfo(data);

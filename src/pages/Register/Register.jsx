@@ -7,7 +7,7 @@ import useTitle from "../../hooks/useTitle";
 
 const Register = () => {
     const { createUser, signInWithGoogle, signInWithGitHub, setUser } = useContext(AuthContext);
-    const [error, setError] = useState("");
+    const [error, setError] = useState();
     useTitle('Register');
 
     const handleRegisterwithGoogle = () => {
@@ -50,7 +50,7 @@ const Register = () => {
         }
         createUser(email, password)
             .then((result) => {
-                const createdUser = result.user;
+                const createdUser = result?.user;
                 createdUser.displayName = name;
                 createdUser.photoURL = photo;
                 createdUser.email = email;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { FaTrash } from 'react-icons/fa';
-
+import { FaLongArrowAltRight, FaTrash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import Swal from "sweetalert2";
 
 const MyToyTable = ({ singleToy, handleDelete }) => {
     const { _id, toyName, category, price, availableStock, sellerName } = singleToy;
