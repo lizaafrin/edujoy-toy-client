@@ -1,32 +1,73 @@
 import React from 'react';
+import { FaStar, FaStarHalf } from 'react-icons/fa';
 
 const Testimonial = () => {
     return (
-        <div>
+        <div className='mx-2 lg:mx-10'>
             <div className='text-center'>
-                <h2 className='font-bold text-5xl text-fuchsia-600'>What our Clients say</h2>
-                <p className='text-xl font-semibold'>See what our customers say about us. It’s really matter for us, how good or bad we will make it for evaluation to make Ella better.</p>
-            </div>
-
-            <figure className="max-w-screen-md">
-                <div className="flex items-center mb-4 text-yellow-300">
-                    <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg aria-hidden="true" className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <div className='w-fit mx-auto  bg-slate-800 rounded-lg mb-14'>
+                    <h2 className='text-xl text-white px-10 py-3'>What Our Clients Say!</h2>
                 </div>
-                <blockquote>
-                    <p className="text-2xl font-semibold text-gray-900 dark:text-white">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
-                </blockquote>
-                <figcaption className="flex items-center mt-6 space-x-3">
-                    <img className="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture" />
-                    <div className="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
-                        <cite className="pr-3 font-medium text-gray-900 dark:text-white">Bonnie Green</cite>
-                        <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">CTO at Flowbite</cite>
+                <p className='text-xl font-semibold mt-5'>See what our customers say about us. It’s really matter for us, how good or bad we will make it for evaluation to make Ella better.</p>
+            </div>
+            <div className='grid grid-cols-3 gap-6 py-8'>
+                <div className='card bg-slate-300 p-4'>
+                    <div className="flex items-center mb-4 text-yellow-300">
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStarHalf></FaStarHalf>
                     </div>
-                </figcaption>
-            </figure>
+                    <blockquote>
+                        <p className="text-2xl font-semibold text-gray-900 dark:text-white">"The customer service at this toy shop is exceptional. They went above and beyond to help me find the perfect toy. I appreciate the focus on sustainable and eco-friendly toys at this shop. It's so important for our kids' future."</p>
+                    </blockquote>
+                    <figcaption className="flex items-center mt-6 space-x-3">
+                        <img className="w-14 h-14 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture" />
+                        <div className="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
+                            <cite className="pr-3 font-medium text-gray-900 dark:text-white">Bonnie Green</cite>
+                            <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">Gobindo Designer at BananaTower</cite>
+                        </div>
+                    </figcaption>
+                </div>
+                <div className='card bg-slate-300 p-4'>
+                    <div className="flex items-center mb-4 text-yellow-300">
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStarHalf></FaStarHalf>
+                    </div>
+                    <blockquote>
+                        <p className="text-2xl font-semibold text-gray-900 dark:text-white">"The customer service at this toy shop is exceptional. They went above and beyond to help me find the perfect toy. I appreciate the focus on sustainable and eco-friendly toys at this shop. It's so important for our kids' future."</p>
+                    </blockquote>
+                    <figcaption className="flex items-center mt-6 space-x-3">
+                        <img className="w-14 h-14 rounded-full" src="https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?w=1380&t=st=1684682532~exp=1684683132~hmac=6164ac75b4b27faaf722886b49dd6eab00f727eebda55a7b1f13560c5ed8d8f4" alt="profile picture" />
+                        <div className="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
+                            <cite className="pr-3 font-medium text-gray-900 dark:text-white">Amy Martin</cite>
+                            <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">CEO at MangoTower</cite>
+                        </div>
+                    </figcaption>
+                </div><div className='card bg-slate-300 p-4'>
+                    <div className="flex items-center mb-4 text-yellow-300">
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStarHalf></FaStarHalf>
+                    </div>
+                    <blockquote>
+                        <p className="text-2xl font-semibold text-gray-900 dark:text-white">"The customer service at this toy shop is exceptional. They went above and beyond to help me find the perfect toy. I appreciate the focus on sustainable and eco-friendly toys at this shop. It's so important for our kids' future."</p>
+                    </blockquote>
+                    <figcaption className="flex items-center mt-6 space-x-3">
+                        <img className="w-14 h-14 rounded-full" src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=1380&t=st=1684682385~exp=1684682985~hmac=f37e94ca42b95b1e35d92266480aaf68f39e43daa15dddd753979a62a7c44578" alt="profile picture" />
+                        <div className="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
+                            <cite className="pr-3 font-medium text-gray-900 dark:text-white">Mathew Hayden</cite>
+                            <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">Manager at OrangeTower</cite>
+                        </div>
+                    </figcaption>
+                </div>
+            </div>
 
         </div>
     );
