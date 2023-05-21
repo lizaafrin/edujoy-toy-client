@@ -1,9 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 const Gallery = () => {
+    useEffect(() => {
+        Aos.init({ duration: 3000 });
+    }, [])
     const { toyInfo } = useContext(AuthContext);
     // console.log(toyInfo);
     // console.log(productData);
@@ -17,13 +22,12 @@ const Gallery = () => {
                 {
                     toyInfo.map((product, index) => {
                         return (
-                            <div key={product._id} className="card w-96 bg-base-100 shadow-xl carousel-item">
+                            <div data-aos="flip-right" key={product._id} className="card w-96 bg-base-100 shadow-xl carousel-item">
                                 <figure><img className='object-cover w-full h-cover overflow-hidden' src={product.picURL} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{product.toyName}</h2>
-                                    <div className="card-actions">
-                                        <button className="btn btn-primary">Buy Now</button>
-                                    </div>
+                                    <h4 className="card-title text-sm">Seller: {product.sellerName}</h4>
+                                    
                                 </div>
 
                             </div>

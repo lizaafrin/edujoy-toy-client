@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import bannerBg from '../../assets/eduBanner.jpg';
 import bannerImage from '../../assets/geography.jpg';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, [])
     return (
         <div
             style={{
@@ -24,7 +29,7 @@ const Banner = () => {
                     <FaLongArrowAltRight className="inline-block"></FaLongArrowAltRight>{" "}
                 </button>
             </div>
-            <div className='w-1/2'>
+            <div data-aos="flip-left"  data-aos-easing="ease-in-sine" className='w-1/2'>
                 <img className='rounded-3xl' src={bannerImage} alt="" />
             </div>
         </div>
