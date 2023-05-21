@@ -18,8 +18,8 @@ const ToyDetails = () => {
                 <h3><span className='font-bold'>Seller Name:</span> {sellerName}</h3>
                 <h3><span className='font-bold'>Seller Email:</span>  {sellerEmail}</h3>
                 <div className="flex gap-2 mt-4">
-                    <div className="badge border-0 bg-fuchsia-400 w-1/2 p-4 text-black"><span className='font-bold'>Price:</span>${price}</div>
-                    <div className="badge border-0 bg-fuchsia-400 w-1/2 p-4 text-black"><span className='font-bold '>Stock: {" "}</span> {availableStock}</div>
+                    <div className="badge border-0 bg-fuchsia-400 w-1/2 p-4 text-black text-base"><span className='font-bold'>Price:</span>${price}</div>
+                    <div className="badge border-0 bg-fuchsia-400 w-1/2 p-4 text-black text-base"><span className='font-bold '>Stock: {" "}</span> {availableStock}</div>
                 </div>
             </div>
         </div>

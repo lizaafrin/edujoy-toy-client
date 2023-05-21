@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Rating from 'react-rating';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 
 const SingleKitCard = ({ singleKit }) => {
@@ -16,7 +17,7 @@ const SingleKitCard = ({ singleKit }) => {
                 <figure><img className='object-cover overflow-hidden w-full h-[300px]' src={picURL} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{toyName}</h2>
-                    <p>{description.slice(0,100)}...</p>
+                    <p>{description.slice(0, 100)}...</p>
                     <h4 className='font-semibold'>Price : {price}</h4>
                     <h4 className='font-semibold'>Rating: {rating}</h4>
                     {/* <Rating
@@ -27,7 +28,10 @@ const SingleKitCard = ({ singleKit }) => {
                     /> */}
                     <span>{rating?.number}</span>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">View Details</button>
+                        <Link to={`/toys/${_id}`}>
+                            <button className="btn btn-primary">View Details</button>
+                        </Link>
+
                     </div>
                 </div>
             </div>
@@ -37,3 +41,4 @@ const SingleKitCard = ({ singleKit }) => {
 };
 
 export default SingleKitCard;
+
