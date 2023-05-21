@@ -15,9 +15,9 @@ const Banner = () => {
                 backgroundImage: `url(${bannerBg}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,4))`,
                 backgroundBlendMode: "overlay",
             }}
-            className="bg-cover bg-center text-white px-4 h-[550px] flex items-center justify-center"
+            className="bg-cover bg-center text-white px-1 md:px-4 h-[550px] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-2"
         >
-            <div className="px-5 lg:px-0 lg:w-2/5 w-1/2 text-left">
+            <div className="px-1 md:px-5 lg:px-0 w-3/4 lg:w-2/5 text-left">
                 <h2 className="text-white text-4xl lg:text-6xl leading-tight tracking-tighter font-bold">
                     <span className="text-fuchsia-700">EDUJOY</span>TOY
                 </h2>
@@ -29,7 +29,7 @@ const Banner = () => {
                     <FaLongArrowAltRight className="inline-block"></FaLongArrowAltRight>{" "}
                 </button>
             </div>
-            <div data-aos="flip-left"  data-aos-easing="ease-in-sine" className='w-1/2'>
+            <div data-aos="flip-left"  data-aos-easing="ease-in-sine" className='w-4/5 md:w-1/2'>
                 <img className='rounded-3xl' src={bannerImage} alt="" />
             </div>
         </div>

@@ -20,7 +20,7 @@ const ShopByCAtegory = () => {
                     <h2 className='text-xl text-white px-10 py-3'>Find Your Desired Products</h2>
                 </div>
                 <div className='border-0 bg-slate-800 rounded-lg mb-5'>
-                    <TabList className='flex flex-row justify-around text-white text-xl py-3'>
+                    <TabList className='flex flex-row justify-around text-white text-base md:text-xl py-3'>
                         <Tab>Science Kits</Tab>
                         <Tab>Learning Kits</Tab>
                         <Tab>Engineering Kits</Tab>
@@ -28,7 +28,7 @@ const ShopByCAtegory = () => {
                 </div>
 
                 <TabPanel>
-                    <div className='grid grid-cols-3 gap-4'>
+                    <div className='grid md:grid-cols-3 gap-4'>
                         {
                             scienceKits.slice(0, 3).map(singleKit => <SingleKitCard key={singleKit._id} singleKit={singleKit}></SingleKitCard>)
                         }
@@ -36,7 +36,7 @@ const ShopByCAtegory = () => {
                 </TabPanel>
 
                 <TabPanel>
-                    <div className='grid grid-cols-3 gap-4'>
+                    <div className='grid md:grid-cols-3 gap-4'>
                         {
                             learningKits.slice(0, 3).map(singleKit => <SingleKitCard key={singleKit._id} singleKit={singleKit}></SingleKitCard>)
                         }
@@ -44,7 +44,7 @@ const ShopByCAtegory = () => {
                 </TabPanel>
 
                 <TabPanel>
-                    <div className='grid grid-cols-3 gap-4'>
+                    <div className='grid md:grid-cols-3 gap-4'>
                         {
                             engineeringKits.slice(0, 3).map(singleKit => <SingleKitCard key={singleKit._id} singleKit={singleKit}></SingleKitCard>)
                         }

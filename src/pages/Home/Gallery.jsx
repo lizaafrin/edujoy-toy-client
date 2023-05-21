@@ -13,7 +13,7 @@ const Gallery = () => {
     // console.log(toyInfo);
     // console.log(productData);
     return (
-        <div className='mt-20'>
+        <div className='mt-20 mx-2 md:mx-0'>
             <div className='w-fit mx-auto  bg-slate-800 rounded-lg'>
                 <h2 className='text-xl text-white px-10 py-3'>Check Out Our Photo Gallery</h2>
             </div>
