@@ -3,6 +3,7 @@ import useTitle from '../../hooks/useTitle';
 import { AuthContext } from '../../providers/AuthProvider';
 import TableData from '../AllToys/TableData';
 import MyToyTable from './MyToyTable';
+import Swal from "sweetalert2";
 
 
 const MyToys = () => {
@@ -16,6 +17,33 @@ const MyToys = () => {
         .then(res => res.json())
         .then(data => setToyInfo(data))
     }, [])
+
+    const handleDelete = (id) => {
+        const proceed = confirm('Are you sure you want to delete?');
+        if (proceed) {
+            // console.log(1);
+            fetch(`http://localhost:5000/myToys/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'content-Type': 'application/json'
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    // console.log(data);
+                    if (data.deletedCount > 0) {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Deleted!",
+                            text: "Toy deleted successfully",
+                        });
+                        const remaining = toyInfo.filter (booking => booking._id !== id)
+                        setToyInfo(remaining);
+                    }
+                    
+                })
+        }
+    }
 
     // const { toyInfo } = useContext(AuthContext);
     // console.log(toyInfo);
@@ -37,7 +65,10 @@ const MyToys = () => {
                     <tbody>
                         {/* row 1 */}
                         {
-                            toyInfo.map((singleToy, index) => <MyToyTable key={index}>{singleToy}</MyToyTable>)
+                            toyInfo.map((singleToy, index) => <MyToyTable key={index} 
+                            singleToy={singleToy}
+                            handleDelete={handleDelete}
+                            ></MyToyTable>)
                         }
                     </tbody>
                 </table>
